@@ -22,6 +22,10 @@
             line-height: 1.6;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: linear-gradient(135deg, #163a5f, #2d6a9f);
             color: white;
@@ -46,6 +50,11 @@
             margin: 3px 0;
         }
 
+
+        /* =========================
+           MAIN
+        ========================= */
+
         main {
             max-width: 1100px;
             margin: 55px auto;
@@ -59,46 +68,75 @@
             color: #163a5f;
         }
 
+
+        /* =========================
+           PUBLICATION GRID
+        ========================= */
+
         .publications {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
+
+        /* =========================
+           PAPER CARD
+        ========================= */
+
         .paper-card {
             background: white;
             border-radius: 16px;
             padding: 35px;
+
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 
             display: flex;
             flex-direction: column;
 
-            transition: transform 0.25s ease,
-                        box-shadow 0.25s ease;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .paper-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.13);
         }
+
+
+        /* =========================
+           PAPER NUMBER
+        ========================= */
 
         .paper-number {
             font-size: 14px;
             font-weight: bold;
+
             color: #2d6a9f;
+
             letter-spacing: 2px;
+
             margin-bottom: 10px;
         }
 
+
+        /* =========================
+           PAPER TYPE
+        ========================= */
+
         .paper-type {
             display: inline-block;
+
             width: fit-content;
 
             background: #e8f1f8;
             color: #163a5f;
 
             padding: 6px 12px;
+
             border-radius: 20px;
 
             font-size: 13px;
@@ -107,24 +145,46 @@
             margin-bottom: 18px;
         }
 
+
+        /* =========================
+           PAPER TITLE
+        ========================= */
+
         .paper-card h2 {
             font-size: 22px;
+
             line-height: 1.45;
+
             color: #163a5f;
+
             margin-bottom: 18px;
         }
 
+
+        /* =========================
+           PAPER DESCRIPTION
+        ========================= */
+
         .paper-card p {
             color: #5b6470;
+
             font-size: 15px;
+
             margin-bottom: 25px;
         }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .buttons {
             margin-top: auto;
 
             display: flex;
+
             gap: 12px;
+
             flex-wrap: wrap;
         }
 
@@ -139,8 +199,11 @@
 
             font-weight: bold;
 
-            transition: 0.2s;
+            transition: 0.2s ease;
         }
+
+
+        /* View PDF button */
 
         .view-paper {
             background: #163a5f;
@@ -151,14 +214,22 @@
             background: #0e2944;
         }
 
+
+        /* GitHub button */
+
         .github {
             background: #eeeeee;
-            color: #222;
+            color: #222222;
         }
 
         .github:hover {
             background: #dddddd;
         }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             text-align: center;
@@ -174,6 +245,11 @@
             font-size: 14px;
         }
 
+
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 750px) {
 
             header {
@@ -184,12 +260,28 @@
                 font-size: 30px;
             }
 
+            header .name {
+                font-size: 20px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
             .publications {
                 grid-template-columns: 1fr;
             }
 
             .paper-card {
                 padding: 25px;
+            }
+
+            .paper-card h2 {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 26px;
             }
 
         }
@@ -202,7 +294,9 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header>
 
@@ -225,7 +319,10 @@
     </header>
 
 
-    <!-- PUBLICATIONS -->
+
+    <!-- =========================
+         PUBLICATIONS
+    ========================= -->
 
     <main>
 
@@ -237,7 +334,9 @@
         <div class="publications">
 
 
-            <!-- PAPER 01 -->
+            <!-- =========================
+                 PAPER 01
+            ========================= -->
 
             <div class="paper-card">
 
@@ -245,23 +344,30 @@
                     PAPER 01
                 </div>
 
+
                 <div class="paper-type">
                     The 9th UTCC National Conference
                 </div>
 
+
                 <h2>
                     Influencing Factors with the Effectiveness of Bone Tumors Treatment in Patients
                 </h2>
+
 
                 <p>
                     Conference publication presenting an analysis of factors
                     influencing the effectiveness of bone tumor treatment in patients.
                 </p>
 
+
                 <div class="buttons">
 
+
+                    <!-- PDF -->
+
                     <a
-                        href="papers/0121.pdf"
+                        href="0121.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="button view-paper">
@@ -271,6 +377,8 @@
                     </a>
 
 
+                    <!-- GitHub -->
+
                     <a
                         href="https://github.com/NuttanichaM/Publication"
                         target="_blank"
@@ -281,12 +389,16 @@
 
                     </a>
 
+
                 </div>
 
             </div>
 
 
-            <!-- PAPER 02 -->
+
+            <!-- =========================
+                 PAPER 02
+            ========================= -->
 
             <div class="paper-card">
 
@@ -294,13 +406,16 @@
                     PAPER 02
                 </div>
 
+
                 <div class="paper-type">
                     Master's Thesis
                 </div>
 
+
                 <h2>
                     FACTORS INFLUENCING TREATMENT OUTCOMES IN BONE CANCER
                 </h2>
+
 
                 <p>
                     Master's thesis investigating factors associated with
@@ -308,10 +423,14 @@
                     statistical analysis and machine learning approaches.
                 </p>
 
+
                 <div class="buttons">
 
+
+                    <!-- PDF -->
+
                     <a
-                        href="papers/thesis-end.pdf"
+                        href="thesis-end.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="button view-paper">
@@ -321,6 +440,8 @@
                     </a>
 
 
+                    <!-- GitHub -->
+
                     <a
                         href="https://github.com/NuttanichaM/Publication"
                         target="_blank"
@@ -330,6 +451,7 @@
                         💻 GitHub
 
                     </a>
+
 
                 </div>
 
@@ -341,7 +463,10 @@
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
